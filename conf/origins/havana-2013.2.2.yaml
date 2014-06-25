@@ -68,11 +68,11 @@ trove:
   repo: git://github.com/openstack/trove.git
   tag: 2013.2.2
 blazar:
-  repo: git@github.com:stackforge/blazar.git
+  repo: git://github.com:stackforge/blazar.git
   branch: master
 blazar-nova:
-  repo: git@github.com:stackforge/blazar-nova.git
+  repo: git://github.com:stackforge/blazar-nova.git
   branch: master
 blazar-client:
-  repo: git@github.com:stackforge/python-blazarclient.git
+  repo: git://github.com:stackforge/python-blazarclient.git
   branch: master

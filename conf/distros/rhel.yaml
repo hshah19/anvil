@@ -429,4 +429,25 @@ components:
             central: openstack-ceilometer-central
             collector: openstack-ceilometer-collector
             compute: openstack-ceilometer-compute
+    blazar:
+        action_classes:
+            install: anvil.components.base_install:PythonInstallComponent
+            running: anvil.components.base_runtime:EmptyRuntime
+            test: anvil.components.base_testing:PythonTestingComponent
+            coverage: anvil.components.base_testing:PythonTestingComponent
+            uninstall: anvil.components.base_install:PkgUninstallComponent
+    blazar-nova:
+        action_classes:
+            install: anvil.components.base_install:PythonInstallComponent
+            running: anvil.components.base_runtime:EmptyRuntime
+            test: anvil.components.base_testing:PythonTestingComponent
+            coverage: anvil.components.base_testing:PythonTestingComponent
+            uninstall: anvil.components.base_install:PkgUninstallComponent
+    blazar-client:
+        action_classes:
+            install: anvil.components.base_install:PythonInstallComponent
+            running: anvil.components.base_runtime:EmptyRuntime
+            test: anvil.components.base_testing:PythonTestingComponent
+            coverage: anvil.components.base_testing:PythonTestingComponent
+            uninstall: anvil.components.base_install:PkgUninstallComponent
 ...

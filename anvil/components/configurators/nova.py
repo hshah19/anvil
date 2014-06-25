@@ -159,6 +159,9 @@ class NovaConfigurator(base.Configurator):
         # Handle configuring the conductor service
         self._configure_conductor(nova_conf)
 
+        #Register blazar-nova extension
+        self._configure_blazar_extension(nova_conf)
+
     def _config_adjust_logging(self, config):
         config.add_with_section('logger_root', 'level', 'DEBUG')
         config.add_with_section('logger_root', 'handlers', "stdout")
@@ -320,6 +323,13 @@ class NovaConfigurator(base.Configurator):
             nova_conf.add('firewall_driver', self.installer.get_option('libvirt_firewall_driver'))
         else:
             nova_conf.add('firewall_driver', self.installer.get_option('basic_firewall_driver'))
+
+    #Configures blazar-nova compute extensions
+    def _configure_blazar_extension(self, nova_conf):
+        nova_conf.add('osapi_compute_extension',
+                      'climatenova.api.extensions.default_reservation.Default_reservation')
+        nova_conf.add('osapi_compute_extension',
+                      'climatenova.api.extensions.reservation.Reservation')
 
     def verify(self):
         # Do a little check to make sure actually have that interface/s

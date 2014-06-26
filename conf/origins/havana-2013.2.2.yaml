@@ -30,13 +30,13 @@ horizon:
   tag: 2013.2.2
 keystone-client:
   repo: git://github.com/openstack/python-keystoneclient.git
-  tag: 0.6.0
+  tag: 0.9.0
 keystone:
   repo: git://github.com/openstack/keystone.git
   tag: 2013.2.2
 nova-client:
   repo: git://github.com/openstack/python-novaclient.git
-  tag: 2.15.0
+  tag: 2.17.0
 nova:
   repo: git://github.com/openstack/nova.git
   tag: 2013.2.2
